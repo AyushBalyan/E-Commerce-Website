@@ -1,0 +1,141 @@
+
+.sneaker_carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 3rem 0;
+  color: var(--text-color-primary);
+  background-color: #f8f8f8;
+  text-align: center;
+  position: relative;
+}
+
+.sneaker_carousel .carousel_title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff6347;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.sneaker_carousel .carousel_container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.sneaker_carousel .carousel_item {
+  flex: 0 0 calc(25% - 1.5rem);
+  scroll-snap-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.sneaker_carousel .carousel_item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sneaker_carousel .sneaker_image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.sneaker_carousel .sneaker_info {
+  padding: 1rem;
+}
+
+.sneaker_carousel .sneaker_name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.sneaker_carousel .sneaker_price {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.sneaker_carousel .nav_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 2;
+}
+
+.sneaker_carousel .nav_button:hover {
+  transform: scale(1.1);
+  background-color: #e55341;
+}
+
+.sneaker_carousel .prev {
+  left: 10px;
+}
+
+.sneaker_carousel .next {
+  right: 10px;
+}
+
+.sneaker_carousel .view_all_container {
+  margin-top: 2rem;
+}
+
+.sneaker_carousel .view_button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sneaker_carousel .view_button:hover {
+  background-color: #e55341;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .sneaker_carousel .carousel_item {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .sneaker_carousel .nav_button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sneaker_carousel .carousel_item {
+    flex: 0 0 100%;
+  }
+
+  .sneaker_carousel .nav_button {
+    width: 32px;
+    height: 32px;
+  }
+}

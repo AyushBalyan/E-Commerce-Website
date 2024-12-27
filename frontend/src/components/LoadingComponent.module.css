@@ -1,0 +1,20 @@
+/* LoadingContainer.module.css */
+.loadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;  /* or rgba(255, 255, 255, 0.9) for semi-transparent */
+    z-index: 1000;
+  }
+  
+  .loadingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }

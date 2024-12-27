@@ -1,0 +1,14 @@
+:root {
+    --nike-orange: #f5750b;
+    --background-color: #ffffff;
+    --text-color-primary: #333333;
+    --text-color-secondary: #666666;
+    --accent-color: #f0f0f0;
+    --watch-brown: #B38B59;
+  }
+  :root {
+    --background-color: #F9F9F9;
+    --text-color-title: #1A1A1A;
+    --text-color-subtitle: #D62828;
+    --accent-color: #f5f5f5;
+  }

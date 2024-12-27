@@ -1,0 +1,210 @@
+.sneaker-carousel {
+  width: 100%;
+  max-width: 100%;
+  margin: 4rem 0 0 0;
+  padding: 3rem 0;
+  color: var(--text-color-primary);
+  background-color: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+}
+
+.sneaker-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--nike-orange), #ff6347);
+}
+
+.carousel-inner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.carousel-title {
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--nike-orange);
+  text-transform: uppercase;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 2rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 calc(25% - 1.5rem);
+  scroll-snap-align: start;
+}
+
+.sneaker-card {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sneaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(245, 117, 11, 0.2);
+}
+
+.sneaker-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.sneaker-info {
+  padding: 1rem;
+}
+
+.sneaker-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-primary);
+}
+
+.sneaker-price {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--nike-orange);
+  color: var(--background-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+}
+
+.nav-button:hover {
+  background-color: #ff6347;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-button {
+  background-color: var(--nike-orange);
+  color: var(--background-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nike-button:hover {
+  background-color: #ff6347;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .carousel-item {
+    flex: 0 0 calc(33.33% - 1.33rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .sneaker-carousel {
+    padding: 2rem 0;
+  }
+
+  .carousel-inner-container {
+    padding: 0 1rem;
+  }
+
+  .carousel-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(100% - 2rem);
+  }
+
+  .nav-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sneaker-carousel {
+    padding: 1.5rem 0;
+  }
+
+  .carousel-inner-container {
+    padding: 0 0.5rem;
+  }
+
+  .carousel-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .nav-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sneaker-card,
+  .nike-button,
+  .nav-button {
+    transition: none;
+  }
+}

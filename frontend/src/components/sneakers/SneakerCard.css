@@ -1,0 +1,36 @@
+/* src/components/SneakerCard.css */
+.sneaker-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .sneaker-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .sneaker-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .sneaker-info {
+    padding: 1rem;
+  }
+  
+  .sneaker-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color-dark);
+  }
+  
+  .sneaker-price {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
